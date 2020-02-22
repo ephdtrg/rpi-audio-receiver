@@ -206,7 +206,8 @@ if [ "$action" = "remove" ]; then
     fi
     # reenable wifi
     #ifconfig wlan0 up &
-    bluetoothctl discoverable on
+    # not setting device discoverable, will switch discovery manually
+    bluetoothctl discoverable off
 fi
 EOF
 chmod 755 /usr/local/bin/bluetooth-udev
